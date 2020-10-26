@@ -102,7 +102,8 @@ public class ServletFileDownload {
             throw new BasicRuntimeException("The file path is null or empty! fileFullPath=" + fileFullPath);
         }
         if (StringUtils.isNullOrEmpty(contentType)) {
-            throw new BasicRuntimeException("The content-type is null or empty! contentType=" + contentType);
+            contentType = "application/octet-stream";
+            //throw new BasicRuntimeException("The content-type is null or empty! fileName=" + fileName);
         }
         FileInputStream in = null;
         OutputStream out = null;
